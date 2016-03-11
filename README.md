@@ -83,7 +83,7 @@ String code = "function addSum(n) {	\n" +
 								
 Codeview.with(getApplicationContext)
 		.withCode(code)
-		.setHtmlHeadContent("<style> table {" +
+		.setHtmlHeadContent("<style> table,tr,td {" +
                         " border: 1px solid black;" +
                         " }" +
                         "" +
