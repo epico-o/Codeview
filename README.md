@@ -39,7 +39,7 @@ Codeview.with(getApplicationContext())
 		.withCode(code)
 		.into(webview);
 ```
-
+<img src="./readmepics/pic1.jpg" width="300">
 
 #####3) set style and language.
 
