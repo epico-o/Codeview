@@ -76,10 +76,10 @@ WebView webview = (WebView) findViewById(R.id.webview);
 
 ```java
 //your string javascript code 
-String code = "function addSum(n) {
-					//javascript function
-					return ++n;
-				}";
+String code = "function addSum(n) {	\n" +
+				"	//javascript function \n" +
+				"	return ++n; \n"+
+				} \n";
 								
 Codeview.with(getApplicationContext)
 		.withCode(code)
