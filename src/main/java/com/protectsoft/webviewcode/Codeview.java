@@ -1,6 +1,7 @@
 package com.protectsoft.webviewcode;
 
 import android.content.Context;
+import android.os.Build;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
@@ -22,8 +23,8 @@ public class Codeview  {
     private static volatile Codeview singleton = null;
     private final Context context;
 
-    private final String[] htmlWrapper;
-    private List<Content> contents;
+    private static String[] htmlWrapper;
+    private static List<Content> contents;
 
     private boolean isTextWrap = false;
 
@@ -49,7 +50,7 @@ public class Codeview  {
      * Double-checked locking  Singleton
      */
     public static Codeview with(Context context) {
-
+        resetCache();
         if(singleton == null) {
             synchronized (Codeview.class) {
                 if(singleton == null) {
@@ -85,7 +86,7 @@ public class Codeview  {
 
     /**
      *
-     * @param html will add html code right after <body> ,
+     * @param html will add html code right after ,
      *             can call multiple times to append extra html code into body section
      * @return
      */
@@ -97,7 +98,7 @@ public class Codeview  {
 
     /**
      *
-     * @param htmlHeadContent set link,css,javascript tags inside <head><head/>
+     * @param htmlHeadContent set link,css,javascript tags inside
      * @return
      */
     public Codeview setHtmlHeadContent(String htmlHeadContent) {
@@ -152,6 +153,8 @@ public class Codeview  {
         if(webview == null) {
             throw new IllegalArgumentException("webview cannot be null");
         }
+
+        //checkWebview(webview);
 
         if(!webview.getSettings().getJavaScriptEnabled()) {
             webview.getSettings().setJavaScriptEnabled(true);
@@ -216,7 +219,7 @@ public class Codeview  {
         static String makeDocument(String content[], Options options) {
 
             content[0] = HtmlCode.HTML_HEAD + "\n";
-            content[1] = "<style>" + options.style + "</style> \n";
+            content[1] = content[1] + "<style>" + options.style + "</style> \n";
             content[1] = content[1] + "<script>" + HighlightLib.HIGHLIGHTJS + "</script> \n";
 
             if(options.isTextWrap) {
@@ -291,6 +294,21 @@ public class Codeview  {
     }
 
 
+
+    private <T extends WebView> void checkWebview(T webview) {
+        if(Build.VERSION.SDK_INT < 18) {
+            webview.clearView();
+
+        } else {
+            webview.loadDataWithBaseURL(null, "about:blank", "text/html", "utf-8", "");
+        }
+    }
+
+
+    private static   void resetCache() {
+        contents = new ArrayList<Content>();
+        htmlWrapper = new String[]{"","","","",""};
+    }
 
     /**
      *
