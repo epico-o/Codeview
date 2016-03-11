@@ -12,7 +12,7 @@ This library was inspired and is working thanks to [highlight.js](https://highli
 Usage
 -----
 
-##### Codeview
+# Codeview
 
 
 1) Get a reference to your WebView or any extended WebView
