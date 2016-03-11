@@ -89,14 +89,14 @@ Codeview.with(getApplicationContext)
 
 
 
-Sample App , comming soon
+Sample App , coming soon
 ----------
 
-Download , comming soon
+Download , coming soon
 --------
 
 ```groovy
-compile comming soon
+compile coming soon
 ```
 
 License
