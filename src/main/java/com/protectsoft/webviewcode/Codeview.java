@@ -69,7 +69,7 @@ public class Codeview  {
      * @return
      */
     public Codeview withCode(String code) {
-        appender(new Content(code,"code"));
+        appender(new Content(code,Content.TYPE_CODE));
         return this;
     }
 
@@ -80,7 +80,7 @@ public class Codeview  {
      * @return
      */
     public Codeview withText(String text) {
-        appender(new Content(text,"text"));
+        appender(new Content(text,Content.TYPE_TEXT));
         return this;
     }
 
@@ -91,7 +91,7 @@ public class Codeview  {
      * @return
      */
     public Codeview withHtml(String html) {
-        appender(new Content(html,"html"));
+        appender(new Content(html,Content.TYPE_HTML));
         return this;
     }
 
