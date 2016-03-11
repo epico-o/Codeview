@@ -75,25 +75,42 @@ WebView webview = (WebView) findViewById(R.id.webview);
 ```
 
 ```java
-//your string javascript code 
-String code = "function addSum(n) {	\n" +
-				"	//javascript function \n" +
-				"	return ++n; \n"+
-				"} \n";
-								
-Codeview.with(getApplicationContext())
-		.withCode(code)
-		.setHtmlHeadContent("<style> table,tr,td {" +
+//your string javascript code
+        String code = "function Constructor(v1,v2,v3)\n" +
+                "{\n" +
+                "  this.v1 = v1;\n" +
+                "  this.v2 = v2;\n" +
+                "  this.funk = function()\n" +
+                "  {\n" +
+                "    console.log(\"Test: \"+ v3 );\n" +
+                "  }\n" +
+                "}\n" +
+                "\n" +
+                "var obj1 = new Constructor(\"par1\",\"par2\",\"par3\");\n" +
+                "var arr = [\"w1\",\"w2\",\"w3\",obj1];\n" +
+                "\n" +
+                "function f2()\n" +
+                "{            \n" +
+                "  obj1.funk(); //works ok\n" +
+                "  console.log(\"test \"+tablica[3].funk.call() ); //doesn't work\n" +
+                "}";
+                
+                
+                 Codeview.with(getApplicationContext())
+                .setHtmlHeadContent("<style> table,tr,td {" +
                         " border: 1px solid black;" +
                         " }" +
                         "" +
                         "</style>")
-		.withHtml("<table><tr><td> my html table </td></tr></table>")
-		.withText("this is text is always wrap inside pre tags")
-		.setStyle(Settings.WithStyle.DARKSTYLE)
-        .setLang(Settings.Lang.JAVASCRIPT)
-		.setAutoWrap(true)
-		.into(webview);
+                .withHtml("<h1> h1 injected header</h1>")
+                .withText("this text is always wrap inside pre tags")
+                .withCode(code)
+                .withHtml("<h1> h3 header after code </h3>")
+                .withHtml("<table><tr><td> my html table </td></tr></table>")
+                .setStyle(Settings.WithStyle.DARKSTYLE)
+                .setLang(Settings.Lang.JAVASCRIPT)
+                .setAutoWrap(true)
+                .into(webView);
 ```
 
 
