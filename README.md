@@ -22,13 +22,18 @@ WebView webview = (WebView) findViewById(R.id.webview);
 //set settings here
 ```
 
-2) Basic usage. Default style is darkula and default language is java.
+2) Basic usage. Default style is Original, and default language is java.
 
 ```java
 //your string code 
-String code = "public void myMeth(int i) { 
-					this.setNum(i);
-				}";
+String code = "public static void main(String[] args) { \n" +
+                "\n" +
+                "//comments\n" +
+                "   for(int i =0; i < 10; i++) {\n" +
+                "       addnum();\n" +
+                "   }\n" +
+                "\n" +
+                "}\n";
 								
 Codeview.with(getApplicationContext)
 		.withCode(code)
@@ -45,14 +50,18 @@ MyTouchWebView webview = (MyTouchWebView) findViewById(R.id.mytouchwebview);
 
 ```java
 //your string java code 
-String code = "public void myMeth(int i) { 
-					this.setNum(i);
-					//comments
-				}";
+String code = "public static void main(String[] args) { \n" +
+                "\n" +
+                "//comments\n" +
+                "   for(int i =0; i < 10; i++) {\n" +
+                "       addnum();\n" +
+                "   }\n" +
+                "\n" +
+                "}\n";
 								
 Codeview.with(getApplicationContext)
 		.withCode(code)
-		.setStyle(Settings.WithStyle.OBSIDIAN)
+		.setStyle(Settings.WithStyle.DARKULA)
         .setLang(Settings.Lang.JAVA)
 		.into(webview);
 ```
