@@ -89,14 +89,14 @@ Codeview.with(getApplicationContext)
 
 
 
-Sample App
+Sample App , comming soon
 ----------
 
-Download
+Download , comming soon
 --------
 
 ```groovy
-compile 'com.protectsoft.codeview:library:1.2.1'
+compile comming soon
 ```
 
 License
