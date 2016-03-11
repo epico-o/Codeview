@@ -78,7 +78,7 @@ Codeview.with(getApplicationContext)
                         " border: 1px solid black;" +
                         " }" +
                         "" +
-                        "<style>")
+                        "</style>")
 		.withHtml("<table><tr><td> my html table </td></tr></table>")
 		.withText("this is text is always wrap inside pre tags")
 		.setStyle(Settings.WithStyle.DARKSTYLE)
