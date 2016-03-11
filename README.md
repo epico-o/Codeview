@@ -15,14 +15,14 @@ Usage
 #### Codeview
 
 
-1) Get a reference to your WebView or any extended WebView
+#####1) Get a reference to your WebView or any extended WebView
 
 ```java
 WebView webview = (WebView) findViewById(R.id.webview);
 //set settings here
 ```
 
-2) Basic usage. Default style is Original, and default language is java.
+#####2) Basic usage. Default style is Original, and default language is java.
 
 ```java
 //your string code 
@@ -41,7 +41,7 @@ Codeview.with(getApplicationContext())
 ```
 
 
-3) set style and language.
+#####3) set style and language.
 
 ```java
 MyTouchWebView webview = (MyTouchWebView) findViewById(R.id.mytouchwebview);
@@ -67,7 +67,7 @@ Codeview.with(getApplicationContext())
 ```
 
 
-4) Inject html head content and text.
+#####4) Inject html head content and text.
 
 ```java
 WebView webview = (WebView) findViewById(R.id.webview);
@@ -115,7 +115,7 @@ WebView webview = (WebView) findViewById(R.id.webview);
 
 
 
-Download ,  coming soon
+####Download ,  coming soon
 --------
 
 ```groovy
