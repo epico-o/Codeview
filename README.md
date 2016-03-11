@@ -15,7 +15,7 @@ Usage
 ##### Codeview
 
 
-1) Get a reference to your WebView or MyCustomWebView
+1) Get a reference to your WebView or any extended WebView
 
 ```java
 WebView webview = (WebView) findViewById(R.id.webview);
