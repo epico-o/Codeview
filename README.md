@@ -39,7 +39,7 @@ Codeview.with(getApplicationContext())
 		.withCode(code)
 		.into(webview);
 ```
-<img src="./readmepics/pic1.png" width="350">
+<img src="./readmepics/pic2.png" width="350">
 
 #####3) set style and language.
 
@@ -65,7 +65,7 @@ Codeview.with(getApplicationContext())
         .setLang(Settings.Lang.JAVA)
 		.into(webview);
 ```
-<img src="./readmepics/pic2.png" width="350">
+<img src="./readmepics/pic1.png" width="350">
 
 #####4) Inject html head content and text.
 
