@@ -35,7 +35,7 @@ String code = "public static void main(String[] args) { \n" +
                 "\n" +
                 "}\n";
 								
-Codeview.with(getApplicationContext)
+Codeview.with(getApplicationContext())
 		.withCode(code)
 		.into(webview);
 ```
@@ -59,7 +59,7 @@ String code = "public static void main(String[] args) { \n" +
                 "\n" +
                 "}\n";
 								
-Codeview.with(getApplicationContext)
+Codeview.with(getApplicationContext())
 		.withCode(code)
 		.setStyle(Settings.WithStyle.DARKULA)
         .setLang(Settings.Lang.JAVA)
@@ -81,7 +81,7 @@ String code = "function addSum(n) {	\n" +
 				"	return ++n; \n"+
 				"} \n";
 								
-Codeview.with(getApplicationContext)
+Codeview.with(getApplicationContext())
 		.withCode(code)
 		.setHtmlHeadContent("<style> table,tr,td {" +
                         " border: 1px solid black;" +
