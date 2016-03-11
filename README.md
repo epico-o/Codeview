@@ -119,6 +119,10 @@ WebView webview = (WebView) findViewById(R.id.webview);
 --------
 
 ```groovy
+repositories {
+        jcenter()
+    }
+    
 compile 'Codeview-1.0.0:webviewcode:1.0.0' waiting jcenter...
 ```
 
