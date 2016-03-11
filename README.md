@@ -115,14 +115,11 @@ WebView webview = (WebView) findViewById(R.id.webview);
 
 
 
-Sample App , coming soon
-----------
-
-Download , coming soon
+Download ,  coming soon
 --------
 
 ```groovy
-compile coming soon
+compile 'Codeview-1.0.0:webviewcode:1.0.0' coming soon
 ```
 
 License
