@@ -96,7 +96,7 @@ WebView webview = (WebView) findViewById(R.id.webview);
                 "}";
                 
                 
-                 Codeview.with(getApplicationContext())
+        Codeview.with(getApplicationContext())
                 .setHtmlHeadContent("<style> table,tr,td {" +
                         " border: 1px solid black;" +
                         " }" +
