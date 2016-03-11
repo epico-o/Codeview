@@ -115,11 +115,11 @@ WebView webview = (WebView) findViewById(R.id.webview);
 <img src="./readmepics/pic3.png" width="350">
 
 
-####Download ,  coming soon
+####Download
 --------
 
 ```groovy
-compile 'Codeview-1.0.0:webviewcode:1.0.0' coming soon
+compile 'Codeview-1.0.0:webviewcode:1.0.0' waiting jcenter...
 ```
 
 License
