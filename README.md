@@ -123,7 +123,7 @@ repositories {
         jcenter()
     }
     
-compile 'Codeview-1.0.0:webviewcode:1.0.0' waiting jcenter...
+compile 'Codeview-1.0.0:webviewcode:1.0.0' 
 ```
 
 License
