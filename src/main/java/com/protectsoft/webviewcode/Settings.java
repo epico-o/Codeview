@@ -48,6 +48,7 @@ public final class Settings {
     }
 
 
+    //not implemented yet
     public final class MimeType {
 
         public static final String TEXT_HTML = "text/html";
@@ -55,14 +56,14 @@ public final class Settings {
 
     }
 
-
+    //not implemented yet
     public final class Charset {
 
         public static final String UTF_8 = "utf-8";
 
     }
 
-
+    //not implemented yet
     public final class TextWrap {
 
         public static final String PRE_WRAP = "pre-wrap";
