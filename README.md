@@ -105,7 +105,7 @@ WebView webview = (WebView) findViewById(R.id.webview);
                 .withHtml("<h1> h1 injected header</h1>")
                 .withText("this text is always wrap inside pre tags")
                 .withCode(code)
-                .withHtml("<h1> h3 header after code </h3>")
+                .withHtml("<h1> h1 header after code </h1>")
                 .withHtml("<table><tr><td> my html table </td></tr></table>")
                 .setStyle(Settings.WithStyle.DARKSTYLE)
                 .setLang(Settings.Lang.JAVASCRIPT)
