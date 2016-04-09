@@ -7,6 +7,7 @@ With styles to chooses and language.
 Also you can inject html and text into webview or any extended webview class.
 
 This library was inspired and is working thanks to [highlight.js](https://highlightjs.org/).
+App using this library. https://play.google.com/store/apps/details?id=com.protectsoft.javatutorial
 
 
 Usage
