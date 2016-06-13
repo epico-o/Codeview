@@ -6,7 +6,7 @@ package com.protectsoft.webviewcode;
 public final class Settings {
 
     //avoid instantiation
-    public Settings() {
+    private Settings() {
     }
 
     public final class Lang {
