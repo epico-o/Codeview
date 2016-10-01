@@ -10,7 +10,9 @@ Also you can inject html and text into webview or any extended webview class.
 
 
 This library was inspired and is working thanks to [highlight.js](https://highlightjs.org/). <br>
-App using Codeview library. https://play.google.com/store/apps/details?id=com.protectsoft.javatutorial
+Apps using Codeview library.<br> 
+https://play.google.com/store/apps/details?id=com.protectsoft.javatutorial <br>
+https://play.google.com/store/apps/details?id=com.protectsoft.pythontutorial
 
 
 Usage
