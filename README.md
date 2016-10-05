@@ -45,7 +45,7 @@ Codeview.with(getApplicationContext())
 		.withCode(code)
 		.into(webview);
 ```
-<img src="https://github.com/avraampiperidis/Codeview/blob/master/readmepics/pic2.png" width="350">
+<img src="https://github.com/avraampiperidis/Codeview/blob/master/readmepics/pic2.png?raw=true" width="350">
 
 #####3) set style and language.
 
@@ -71,7 +71,7 @@ Codeview.with(getApplicationContext())
         .setLang(Settings.Lang.JAVA)
 		.into(webview);
 ```
-<img src="./readmepics/pic1.png" width="350">
+<img src="https://github.com/avraampiperidis/Codeview/blob/master/readmepics/pic1.png?raw=true" width="350">
 
 #####4) Inject html head content and text.
 
@@ -118,7 +118,7 @@ WebView webview = (WebView) findViewById(R.id.webview);
                 .setAutoWrap(true)
                 .into(webView);
 ```
-<img src="./readmepics/pic3.png" width="350">
+<img src="https://github.com/avraampiperidis/Codeview/blob/master/readmepics/pic3.png?raw=true" width="350">
 
 
 ####Download
