@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Codeview by avraampiperidis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Codeview</h1>
+      <h2 class="project-tagline">Codeview is a android library tha lets you preview code in webview very easy and simple with highlights and colors. </h2>
+      <a href="https://github.com/avraampiperidis/Codeview" class="btn">View on GitHub</a>
+      <a href="https://github.com/avraampiperidis/Codeview/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/avraampiperidis/Codeview/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="codeview" class="anchor" href="#codeview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Codeview</h1>
+
+<hr>
+
+<p><a href="http://android-arsenal.com/details/1/3999"><img src="https://img.shields.io/badge/Android%20Arsenal-Codeview-brightgreen.svg?style=flat" alt="Android Arsenal"></a></p>
+
+<p>Codeview is a android library tha lets you
+preview code in webview very easy and simple with highlighs and colors.
+With styles to chooses and language.</p>
+
+<p>Also you can inject html and text into webview or any extended webview class.</p>
+
+<p>This library was inspired and is working thanks to <a href="https://highlightjs.org/">highlight.js</a>. <br>
+Apps using Codeview library.<br> 
+<a href="https://play.google.com/store/apps/details?id=com.protectsoft.javatutorial">https://play.google.com/store/apps/details?id=com.protectsoft.javatutorial</a> <br>
+<a href="https://play.google.com/store/apps/details?id=com.protectsoft.pythontutorial">https://play.google.com/store/apps/details?id=com.protectsoft.pythontutorial</a></p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<h4>
+<a id="codeview-1" class="anchor" href="#codeview-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Codeview</h4>
+
+<h5>
+<a id="1-get-a-reference-to-your-webview-or-any-extended-webview" class="anchor" href="#1-get-a-reference-to-your-webview-or-any-extended-webview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1) Get a reference to your WebView or any extended WebView</h5>
+
+<div class="highlight highlight-source-java"><pre><span class="pl-smi">WebView</span> webview <span class="pl-k">=</span> (<span class="pl-smi">WebView</span>) findViewById(<span class="pl-smi">R</span><span class="pl-k">.</span>id<span class="pl-k">.</span>webview);
+<span class="pl-c">//set settings here</span></pre></div>
+
+<h5>
+<a id="2-basic-usage-default-style-is-original-and-default-language-is-java" class="anchor" href="#2-basic-usage-default-style-is-original-and-default-language-is-java" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2) Basic usage. Default style is Original, and default language is java.</h5>
+
+<div class="highlight highlight-source-java"><pre><span class="pl-c">//your string code </span>
+<span class="pl-smi">String</span> code <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>public static void main(String[] args) { <span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span><span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span>//comments<span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span>   for(int i =0; i &lt; 10; i++) {<span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span>       addnum();<span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span>   }<span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span><span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span>}<span class="pl-cce">\n</span><span class="pl-pds">"</span></span>;
+
+<span class="pl-smi">Codeview</span><span class="pl-k">.</span>with(getApplicationContext())
+        .withCode(code)
+        .into(webview);</pre></div>
+
+<p><img src="./readmepics/pic2.png" width="350"></p>
+
+<h5>
+<a id="3-set-style-and-language" class="anchor" href="#3-set-style-and-language" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3) set style and language.</h5>
+
+<div class="highlight highlight-source-java"><pre><span class="pl-smi">MyTouchWebView</span> webview <span class="pl-k">=</span> (<span class="pl-smi">MyTouchWebView</span>) findViewById(<span class="pl-smi">R</span><span class="pl-k">.</span>id<span class="pl-k">.</span>mytouchwebview);
+<span class="pl-c">//set settings here</span></pre></div>
+
+<div class="highlight highlight-source-java"><pre><span class="pl-c">//your string java code </span>
+<span class="pl-smi">String</span> code <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>public static void main(String[] args) { <span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span><span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span>//comments<span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span>   for(int i =0; i &lt; 10; i++) {<span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span>       addnum();<span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span>   }<span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span><span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span>}<span class="pl-cce">\n</span><span class="pl-pds">"</span></span>;
+
+<span class="pl-smi">Codeview</span><span class="pl-k">.</span>with(getApplicationContext())
+        .withCode(code)
+        .setStyle(<span class="pl-smi">Settings</span><span class="pl-k">.</span><span class="pl-smi">WithStyle</span><span class="pl-c1"><span class="pl-k">.</span>DARKULA</span>)
+        .setLang(<span class="pl-smi">Settings</span><span class="pl-k">.</span><span class="pl-smi">Lang</span><span class="pl-c1"><span class="pl-k">.</span>JAVA</span>)
+        .into(webview);</pre></div>
+
+<p><img src="./readmepics/pic1.png" width="350"></p>
+
+<h5>
+<a id="4-inject-html-head-content-and-text" class="anchor" href="#4-inject-html-head-content-and-text" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4) Inject html head content and text.</h5>
+
+<div class="highlight highlight-source-java"><pre><span class="pl-smi">WebView</span> webview <span class="pl-k">=</span> (<span class="pl-smi">WebView</span>) findViewById(<span class="pl-smi">R</span><span class="pl-k">.</span>id<span class="pl-k">.</span>webview);
+<span class="pl-c">//set settings here</span></pre></div>
+
+<div class="highlight highlight-source-java"><pre><span class="pl-c">//your string javascript code</span>
+        <span class="pl-smi">String</span> code <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>function Constructor(v1,v2,v3)<span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span>{<span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span>  this.v1 = v1;<span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span>  this.v2 = v2;<span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span>  this.funk = function()<span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span>  {<span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span>    console.log(<span class="pl-cce">\"</span>Test: <span class="pl-cce">\"</span>+ v3 );<span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span>  }<span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span>}<span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span><span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span>var obj1 = new Constructor(<span class="pl-cce">\"</span>par1<span class="pl-cce">\"</span>,<span class="pl-cce">\"</span>par2<span class="pl-cce">\"</span>,<span class="pl-cce">\"</span>par3<span class="pl-cce">\"</span>);<span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span>var arr = [<span class="pl-cce">\"</span>w1<span class="pl-cce">\"</span>,<span class="pl-cce">\"</span>w2<span class="pl-cce">\"</span>,<span class="pl-cce">\"</span>w3<span class="pl-cce">\"</span>,obj1];<span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span><span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span>function f2()<span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span>{            <span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span>  obj1.funk(); //works ok<span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span>  console.log(<span class="pl-cce">\"</span>test <span class="pl-cce">\"</span>+tablica[3].funk.call() ); //doesn't work<span class="pl-cce">\n</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                <span class="pl-s"><span class="pl-pds">"</span>}<span class="pl-pds">"</span></span>;
+
+
+        <span class="pl-smi">Codeview</span><span class="pl-k">.</span>with(getApplicationContext())
+                .setHtmlHeadContent(<span class="pl-s"><span class="pl-pds">"</span>&lt;style&gt; table,tr,td {<span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                        <span class="pl-s"><span class="pl-pds">"</span> border: 1px solid black;<span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                        <span class="pl-s"><span class="pl-pds">"</span> }<span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                        <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>
+                        <span class="pl-s"><span class="pl-pds">"</span>&lt;/style&gt;<span class="pl-pds">"</span></span>)
+                .withHtml(<span class="pl-s"><span class="pl-pds">"</span>&lt;h1&gt; h1 injected header&lt;/h1&gt;<span class="pl-pds">"</span></span>)
+                .withText(<span class="pl-s"><span class="pl-pds">"</span>this text is always wrap inside pre tags<span class="pl-pds">"</span></span>)
+                .withCode(code)
+                .withHtml(<span class="pl-s"><span class="pl-pds">"</span>&lt;h1&gt; h1 header after code &lt;/h1&gt;<span class="pl-pds">"</span></span>)
+                .withHtml(<span class="pl-s"><span class="pl-pds">"</span>&lt;table&gt;&lt;tr&gt;&lt;td&gt; my html table &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;<span class="pl-pds">"</span></span>)
+                .setStyle(<span class="pl-smi">Settings</span><span class="pl-k">.</span><span class="pl-smi">WithStyle</span><span class="pl-c1"><span class="pl-k">.</span>DARKSTYLE</span>)
+                .setLang(<span class="pl-smi">Settings</span><span class="pl-k">.</span><span class="pl-smi">Lang</span><span class="pl-c1"><span class="pl-k">.</span>JAVASCRIPT</span>)
+                .setAutoWrap(<span class="pl-c1">true</span>)
+                .into(webView);</pre></div>
+
+<p><img src="./readmepics/pic3.png" width="350"></p>
+
+<h4>
+<a id="download" class="anchor" href="#download" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Download</h4>
+
+<hr>
+
+<div class="highlight highlight-source-groovy"><pre>repositories {
+        jcenter()
+    }
+
+compile <span class="pl-s"><span class="pl-pds">'</span>Codeview-1.0.0:webviewcode:1.0.0<span class="pl-pds">'</span></span> </pre></div>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>MIT License</p>
+
+<p>Copyright (c) 2016 Avraam Piperidis</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/avraampiperidis/Codeview">Codeview</a> is maintained by <a href="https://github.com/avraampiperidis">avraampiperidis</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
