@@ -1,4 +1,4 @@
-#Codeview
+# Codeview
 -------------
 http://avraampiperidis.github.io/Codeview/ <br>
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Codeview-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/3999)
@@ -22,14 +22,14 @@ Usage
 #### Codeview
 
 
-#####1) Get a reference to your WebView or any extended WebView
+##### 1) Get a reference to your WebView or any extended WebView
 
 ```java
 WebView webview = (WebView) findViewById(R.id.webview);
 //set settings here
 ```
 
-#####2) Basic usage. Default style is Original, and default language is java.
+##### 2) Basic usage. Default style is Original, and default language is java.
 
 ```java
 //your string code 
@@ -48,7 +48,7 @@ Codeview.with(getApplicationContext())
 ```
 <img src="https://github.com/avraampiperidis/Codeview/blob/master/readmepics/pic2.png?raw=true" width="350">
 
-#####3) set style and language.
+##### 3) set style and language.
 
 ```java
 MyTouchWebView webview = (MyTouchWebView) findViewById(R.id.mytouchwebview);
@@ -74,7 +74,7 @@ Codeview.with(getApplicationContext())
 ```
 <img src="https://github.com/avraampiperidis/Codeview/blob/master/readmepics/pic1.png?raw=true" width="350">
 
-#####4) Inject html head content and text.
+##### 4) Inject html head content and text.
 
 ```java
 WebView webview = (WebView) findViewById(R.id.webview);
@@ -122,7 +122,7 @@ WebView webview = (WebView) findViewById(R.id.webview);
 <img src="https://github.com/avraampiperidis/Codeview/blob/master/readmepics/pic3.png?raw=true" width="350">
 
 
-####Download
+#### Download
 --------
 
 ```groovy
