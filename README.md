@@ -15,6 +15,7 @@ Apps using Codeview library.<br>
 https://play.google.com/store/apps/details?id=com.protectsoft.javatutorial <br>
 https://play.google.com/store/apps/details?id=com.protectsoft.pythontutorial
 
+https://bintray.com/zeronerone/maven/Codeview#statistics <br>
 
 Usage
 -----
@@ -130,7 +131,6 @@ WebView webview = (WebView) findViewById(R.id.webview);
 ```
 <img src="https://github.com/avraampiperidis/Codeview/blob/master/readmepics/pic3.png?raw=true" width="350">
 
-https://bintray.com/zeronerone/maven/Codeview#statistics <br>
 ## License
 MIT License
 
