@@ -21,7 +21,16 @@ Usage
 
 #### Codeview
 
+#### Download/Install Gradle
+--------
 
+```groovy
+repositories {
+        jcenter()
+    }
+    
+compile 'Codeview-1.0.0:webviewcode:1.0.0' 
+```
 ##### 1) Get a reference to your WebView or any extended WebView
 
 ```java
@@ -121,17 +130,6 @@ WebView webview = (WebView) findViewById(R.id.webview);
 ```
 <img src="https://github.com/avraampiperidis/Codeview/blob/master/readmepics/pic3.png?raw=true" width="350">
 
-
-#### Download
---------
-
-```groovy
-repositories {
-        jcenter()
-    }
-    
-compile 'Codeview-1.0.0:webviewcode:1.0.0' 
-```
 https://bintray.com/zeronerone/maven/Codeview#statistics <br>
 ## License
 MIT License
