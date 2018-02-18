@@ -16,6 +16,7 @@ https://play.google.com/store/apps/details?id=com.protectsoft.javatutorial   Ins
 https://play.google.com/store/apps/details?id=com.protectsoft.pythontutorial Installs(10,000 - 50,000) <br>
 
 https://bintray.com/zeronerone/maven/Codeview#statistics <br>
+
 Usage
 -----
 
