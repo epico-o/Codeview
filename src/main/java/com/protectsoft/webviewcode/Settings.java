@@ -19,6 +19,9 @@ public final class Settings {
         public static final String PHP = "php";
         public static final String SQL = "sql";
         public static final String CPLUSPLUS = "c++";
+        public static final String HTML = "html";
+        public static final String CSS = "css";
+        public static final String JSON = "json";
 
     }
 
